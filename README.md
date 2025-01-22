@@ -1,27 +1,92 @@
-# NgAdvance
+# Angular Template Library
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
+A ready-to-use Angular template library with essential tools pre-configured. Start building your Angular app with minimal setup!
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Angular Framework**: Pre-configured with Angular.
+- **Prettier**: Code formatter for consistent style.
+- **Jest**: Unit testing framework.
+- **Husky**: Git hooks for quality checks.
+- **ESLint**: Linter for catching and fixing issues.
 
-## Code scaffolding
+## Quick Start
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 1. Clone the Repository
 
-## Build
+```bash
+git clone https://github.com/your-username/angular-template-library.git
+cd angular-template-library
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 2. Install Dependencies
 
-## Running unit tests
+```bash
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 3. Start the Development Server
 
-## Running end-to-end tests
+```bash
+npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+The app will be available at `http://localhost:4200/`.
 
-## Further help
+## Commands
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Development
+
+- **Start the development server**:
+  ```bash
+  npm start
+  ```
+
+### Code Formatting
+
+- **Format code with Prettier**:
+  ```bash
+  npm run pretty-quick
+  ```
+
+### Linting
+
+- **Lint code with ESLint**:
+  ```bash
+  npm run lint
+  ```
+
+### Testing
+
+- **Run unit tests with Jest**:
+  ```bash
+  npm run test
+  ```
+
+### Git Hooks
+
+- **Pre-commit hooks (Husky)**: Automatically runs linting and testing before committing changes.
+
+### Build
+
+- **Build the project for production**:
+  ```bash
+  npm run build
+  ```
+  The output will be available in the `dist/` folder.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature-branch-name`.
+3. Commit your changes: `git commit -m 'Add some feature'`.
+4. Push to the branch: `git push origin feature-branch-name`.
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Feedback & Support
+
+For issues and feature requests, open an [issue](https://github.com/your-username/angular-template-library/issues).
