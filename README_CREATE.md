@@ -51,6 +51,9 @@ rules: {},
 );
 
 4.  npm install prettier -D
+
+    https://dev.to/xansiety/angular-14-prettier-husky-setup-4hcm/#:~:text=Angular%2014%20%2B%20Prettier%20%2B%20Husky%20Setup%201,...%207%207.Testing%20Prettier%20%2B%20ESLint%20%2B%20Husky
+
     .prettierrc {
     "printWidth": 100,
     "tabWidth": 2,
@@ -90,12 +93,17 @@ rules: {},
 
             npm run test
 
-7.  npm i -D jest jest-preset-angular
+7.  npm i -D jest jest-preset-angular @types/jest
+
+    https://medium.com/@philip.mutua/setting-up-jest-in-your-angular-16-project-3638ef65f3a3
+
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
 
     - remove all the other karma and jasmine related files and commands on the .json packages
+
+    - npm uninstall @types/jasmine jasmine-core karma karma-chrome-launcher karma-coverage karma-jasmine karma-jasmine-html-reporter
 
     - jest.config.js in root
 
@@ -130,4 +138,5 @@ All done now
 Result When we try to commit the code on the github the below things will happen
 
 1. pretty-quick will run and format the code and check for the lint.
-2. If lint succeed,
+2. If lint succeed, commit also succeed else need to fix the lint problem.
+3. on code push to the github, all the jest test cases will run, if all the test cases passes then only the code will be pushed else need to fix the test.
