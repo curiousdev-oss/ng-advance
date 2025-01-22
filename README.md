@@ -1,4 +1,4 @@
-# Angular Template Library
+# Angular 18 Template Library
 
 A ready-to-use Angular template library with essential tools pre-configured. Start building your Angular app with minimal setup!
 
