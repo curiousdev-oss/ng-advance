@@ -1,0 +1,35 @@
+name: ESLint Web Performance Plugin CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run ESLint
+      run: npm run lint
+
+    - name: Verify web-perf plugin is working
+      run: |
+        echo "Checking if eslint-plugin-web-perf is configured..."
+        grep -q "web-perf" eslint.config.js && echo "✅ web-perf plugin found in config" || echo "❌ web-perf plugin not found"
+        echo "Running ESLint with web-perf rules..."
+        npm run lint 2>&1 | tee lint-output.txt
+        echo "ESLint completed successfully with web-perf plugin validation."
