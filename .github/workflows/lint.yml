@@ -29,7 +29,7 @@ jobs:
     - name: Verify web-perf plugin is working
       run: |
         echo "Checking if eslint-plugin-web-perf is configured..."
-        grep -q "web-perf" eslint.config.js && echo "✅ web-perf plugin found in config" || echo "❌ web-perf plugin not found"
+        grep -q "web-perf" eslint.config.mjs && echo "✅ web-perf plugin found in config" || echo "❌ web-perf plugin not found"
         echo "Running ESLint with web-perf rules..."
         npm run lint 2>&1 | tee lint-output.txt
         echo "ESLint completed successfully with web-perf plugin validation."
