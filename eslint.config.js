@@ -2,6 +2,7 @@
 const eslint = require('@eslint/js');
 const tseslint = require('typescript-eslint');
 const angular = require('angular-eslint');
+const webPerfPlugin = require('@curiousdev-oss/eslint-plugin-web-perf');
 
 module.exports = tseslint.config(
   {
@@ -11,6 +12,7 @@ module.exports = tseslint.config(
       ...tseslint.configs.recommended,
       ...tseslint.configs.stylistic,
       ...angular.configs.tsRecommended,
+      webPerfPlugin.configs.recommended,
     ],
     processor: angular.processInlineTemplates,
     rules: {
