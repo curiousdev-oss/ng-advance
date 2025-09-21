@@ -12,8 +12,10 @@ export default tseslint.config(
       ...tseslint.configs.recommended,
       ...tseslint.configs.stylistic,
       ...angular.configs.tsRecommended,
-      webPerfPlugin.configs.recommended,
     ],
+    plugins: {
+      'web-perf': webPerfPlugin,
+    },
     processor: angular.processInlineTemplates,
     rules: {
       '@angular-eslint/directive-selector': [
